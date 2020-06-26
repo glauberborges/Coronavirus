@@ -24,19 +24,20 @@ export default function Routes() {
       <NavigationContainer theme={MyTheme}>
         <Tab.Navigator>
 
-          <Tab.Screen name="Home" component={Home}
-              options={{
-                tabBarIcon: ({color}) => (
-                    <Feather name="home" color={color} size={20} />
-                )
-              }}
-          />
             <Tab.Screen name="Noticías" component={News}
                 options={{
                     tabBarIcon: ({color}) => (
                         <Feather name="book-open" color={color} size={20} />
                     )
                 }}
+            />
+
+            <Tab.Screen name="Home" component={Home}
+                        options={{
+                            tabBarIcon: ({color}) => (
+                                <Feather name="home" color={color} size={20} />
+                            )
+                        }}
             />
 
         </Tab.Navigator>
