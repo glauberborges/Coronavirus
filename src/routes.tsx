@@ -12,17 +12,24 @@ export default function Routes() {
   const MyTheme = {
     ...DefaultTheme,
     colors: {
-      primary: '#0088ff',
+      primary: '#590cac',
       background: '#ffffff',
       card: 'rgb(255, 255, 255)',
       text: 'rgb(28, 28, 30)',
-      border: '#0088ff',
+      border: '#590cac',
     },
   };
 
   return (
       <NavigationContainer theme={MyTheme}>
         <Tab.Navigator>
+            <Tab.Screen name="Home" component={Home}
+                options={{
+                    tabBarIcon: ({color}) => (
+                        <Feather name="home" color={color} size={20}/>
+                    )
+                }}
+            />
 
             <Tab.Screen name="Noticías" component={News}
                 options={{
@@ -32,13 +39,6 @@ export default function Routes() {
                 }}
             />
 
-            <Tab.Screen name="Home" component={Home}
-                        options={{
-                            tabBarIcon: ({color}) => (
-                                <Feather name="home" color={color} size={20} />
-                            )
-                        }}
-            />
 
         </Tab.Navigator>
       </NavigationContainer>

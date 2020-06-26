@@ -13,6 +13,7 @@ const Index: React.FC = () => {
 
     return (
         <>
+
             <Container>
 
                 <Header style={{marginTop: StatusBar.currentHeight }}>
